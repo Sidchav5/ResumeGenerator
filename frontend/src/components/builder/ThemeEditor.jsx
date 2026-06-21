@@ -98,6 +98,31 @@ export default function ThemeEditor() {
               </select>
             </div>
 
+            {/* Text Size */}
+            <div className="theme-control">
+              <label>Text Size: {theme.fontSize}pt</label>
+              <input
+                type="range"
+                min="8"
+                max="14"
+                step="0.5"
+                value={theme.fontSize}
+                onChange={e => updateTheme({ fontSize: parseFloat(e.target.value) })}
+              />
+            </div>
+
+            {/* Template Design */}
+            <div className="theme-control">
+              <label>Template Design</label>
+              <select
+                value={theme.layout || 'classic'}
+                onChange={e => updateTheme({ layout: e.target.value })}
+              >
+                <option value="classic">Classic Centered</option>
+                <option value="modern">Modern Left-Border</option>
+              </select>
+            </div>
+
             {/* Spacing */}
             <div className="theme-control">
               <label>Spacing: {theme.spacing.toFixed(1)}x</label>

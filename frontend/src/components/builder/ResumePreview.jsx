@@ -19,7 +19,7 @@ export default function ResumePreview({ data }) {
 
   return (
     <div
-      className="preview-container"
+      className={`preview-container template-${theme.layout || 'classic'}`}
       id="resume-preview"
       style={{ fontFamily: theme.fontFamily, fontSize: `${theme.fontSize}pt` }}
     >

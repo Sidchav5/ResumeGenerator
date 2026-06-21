@@ -144,3 +144,101 @@
   color: #1e293b;
   margin-bottom: 2px;
 }
+
+/* ===================================================
+   TEMPLATE: MODERN LEFT-BORDER
+   =================================================== */
+
+/* Header — left-aligned with a bold left accent bar */
+.template-modern .preview-header {
+  text-align: left;
+  border-bottom: none;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-left: 4px solid #2563eb;
+  padding-left: 16px;
+  position: relative;
+}
+
+.template-modern .preview-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #2563eb 0%, #e2e8f0 60%, transparent 100%);
+}
+
+.template-modern .preview-name {
+  font-size: 24pt;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+}
+
+.template-modern .preview-contact {
+  justify-content: flex-start;
+  gap: 6px 12px;
+  font-size: 8.5pt;
+}
+
+/* Section titles — left accent bar instead of full underline */
+.template-modern .preview-section-title {
+  border-bottom: none;
+  padding-bottom: 0;
+  padding-left: 10px;
+  border-left: 3px solid #2563eb;
+  margin-bottom: 10px;
+  font-size: 10.5pt;
+  letter-spacing: 1.5px;
+}
+
+/* Entry headers — subtle accent on dates */
+.template-modern .preview-entry-header {
+  align-items: center;
+}
+
+.template-modern .preview-entry-date {
+  font-size: 8.5pt;
+  font-weight: 600;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 1px 8px;
+  border-radius: 4px;
+}
+
+/* Subtitles — colored accent */
+.template-modern .preview-entry-subtitle {
+  color: #64748b;
+  font-style: italic;
+  font-size: 9pt;
+}
+
+/* Skills grid — horizontal inline badges */
+.template-modern .preview-skills-grid {
+  gap: 6px;
+}
+
+.template-modern .preview-skill-row {
+  padding: 3px 0;
+  border-left: 2px solid #e2e8f0;
+  padding-left: 10px;
+}
+
+.template-modern .preview-skill-row strong {
+  color: #334155;
+}
+
+/* Lists — tighter spacing */
+.template-modern .preview-list li,
+.template-modern .preview-simple-list li {
+  font-size: 9pt;
+  line-height: 1.45;
+  margin-bottom: 1px;
+}
+
+/* Outer glow border — gradient accent on left side */
+.template-modern::after {
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.3), rgba(124, 58, 237, 0.15), transparent);
+}

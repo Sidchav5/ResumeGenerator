@@ -55,6 +55,7 @@ const DEFAULT_THEME = {
   fontSize: 10,
   spacing: 1.0,
   bulletStyle: 'disc',
+  layout: 'classic',
   presetName: 'Deep Dark',
 }
 
