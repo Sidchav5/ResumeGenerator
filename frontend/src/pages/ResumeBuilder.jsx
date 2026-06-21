@@ -110,6 +110,9 @@ export default function ResumeBuilder() {
             onChangePos={v => update('positions', v)}
             onChangeExtra={v => update('extracurricular', v)}
           />
+          <div className="builder-footer-credit">
+            Developed by <strong>Siddhesh Chavan</strong> (<a href="mailto:csiddhesh768@gmail.com">csiddhesh768@gmail.com</a>)
+          </div>
         </div>
 
         {/* Right — Preview or LaTeX */}
