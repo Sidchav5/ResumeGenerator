@@ -9,6 +9,9 @@ export async function downloadPDF() {
   const element = document.getElementById('resume-preview')
   if (!element) return
 
+  // Temporarily add class to override screen styling (like gradient borders) for clean PDF export
+  element.classList.add('pdf-export-mode')
+
   // Dynamically import html2pdf to keep initial bundle small
   const html2pdf = (await import('html2pdf.js')).default
 
@@ -17,7 +20,7 @@ export async function downloadPDF() {
     filename: 'resume.pdf',
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: {
-      scale: 2,
+      scale: 2.5,
       useCORS: true,
       letterRendering: true,
     },
@@ -28,7 +31,14 @@ export async function downloadPDF() {
     },
   }
 
-  await html2pdf().set(opt).from(element).save()
+  try {
+    await html2pdf().set(opt).from(element).save()
+  } catch (error) {
+    console.error('Error generating PDF:', error)
+  } finally {
+    // Remove the override class to restore original on-screen styling
+    element.classList.remove('pdf-export-mode')
+  }
 }
 
 export function downloadLatex(latexCode, filename = 'resume.tex') {

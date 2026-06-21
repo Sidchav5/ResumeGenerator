@@ -242,3 +242,20 @@
 .template-modern::after {
   background: linear-gradient(180deg, rgba(37, 99, 235, 0.3), rgba(124, 58, 237, 0.15), transparent);
 }
+
+/* ===================================================
+   PDF EXPORT OVERRIDES (CLEAN PRINT STYLES)
+   =================================================== */
+.preview-container.pdf-export-mode {
+  background: #ffffff !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.preview-container.pdf-export-mode::after,
+.template-modern.pdf-export-mode::after {
+  display: none !important;
+  content: none !important;
+}
+
